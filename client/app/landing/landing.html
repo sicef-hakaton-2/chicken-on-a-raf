@@ -1,0 +1,31 @@
+<div class="landing-logo"></div>
+<h1 class="landing-h1">Reffit</h1>
+<div class="country-select">
+    <select name="country" id="country" ng-model="location" ng-change="locationChanged()">
+        <option value="" disabled selected>Select country</option>
+        <option value="lesbos">Lesbos</option>
+        <option value="nis">Niš</option>
+        <option value="belgrade">Belgrade</option>
+    </select>
+</div>
+<div class="hex-wrapper" id="landing-wrapper">
+    <rft-hex-small class="fadeInUp animated" data-col="0" data-row="1">
+        <i class="fa fa-qr"></i>
+        <span>Scan</span>
+    </rft-hex-small>
+    <rft-hex-small class="fadeInUp animated" data-col="1" data-row="0" ui-sref="main.info">
+        <i class="fa fa-info"></i>
+        <span>Info</span>
+    </rft-hex-small>
+    <rft-hex-small class="fadeInUp animated" data-col="1" data-row="1" ui-sref="main.help({type:'request'})">
+        <i class="fa fa-forum"></i>
+        <span>Help</span>
+    </rft-hex-small>
+    <rft-hex-small class="fadeInUp animated" data-col="2" data-row="1" ui-sref="main.family">
+        <i class="fa fa-search"></i>
+        <span>Family</span>
+    </rft-hex-small>
+</div>
+<!--<div class="login-btn" ui-sref="login">-->
+    <!--<i class="fa fa-login"></i>Login-->
+<!--</div>-->

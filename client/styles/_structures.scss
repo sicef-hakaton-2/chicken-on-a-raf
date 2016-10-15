@@ -1,0 +1,30 @@
+.text-center {
+    text-align: center;
+}
+
+.text-danger{
+    color: $rft-red !important;
+}
+
+.text-warning{
+    color: $rft-yellow;
+}
+
+.text-ellipsis{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.margin-center{
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.overflow{
+    overflow: hidden;
+}
+
+.text-right{
+    text-align: right;
+}

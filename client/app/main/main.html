@@ -1,0 +1,31 @@
+<header class="rft-header">
+    <div class="logo" ui-sref="landing"></div>
+    <nav>
+        <span class="fa fa-menu"></span>
+        <span class="fa fa-qr" ng-click="generateQR()" ng-if="$state.is('main.post')"></span>
+        <span class="fa fa-forum"></span>
+    </nav>
+</header>
+<div class="main-view-container" ui-view></div>
+<div class="view-footer" ng-if="hasFooter">
+    <button class="footer-btn" type="button" ng-if="$state.is('main.post')">
+        <i class="fa fa-thumbs-up"></i>
+        Rate up
+    </button>
+    <button class="footer-btn" type="button" ng-if="$state.is('main.post')">
+        <i class="fa fa-thumbs-down"></i>
+        Rate down
+    </button>
+    <button class="footer-btn" type="button" ng-if="$state.is('main.posts')" ui-sref="main.create_post">
+        <i class="fa fa-plus"></i>
+        Create new post
+    </button>
+    <button class="footer-btn" type="button" ng-click="createPost()" ng-if="$state.is('main.create_post')">
+        <i class="fa fa-plus"></i>
+        Publish post
+    </button>
+    <button class="footer-btn" type="button" ng-click="createPost()" ng-if="$state.is('main.help')" ui-sref="main.create_post">
+        <i class="fa fa-plus"></i>
+        {{ params.type === 'give' ? 'Give' : 'Request' }} help
+    </button>
+</div>

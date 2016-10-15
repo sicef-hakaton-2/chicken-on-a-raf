@@ -1,0 +1,10 @@
+<div class="post-list" ui-sref="main.post({id: post._id})">
+    <div class="hex-wrapper post-wrapper">
+        <rft-hex-small>
+            <i class="fa {{ post.flag ? 'fa-red-cross text-danger' : 'fa-reffit' }}"></i>
+        </rft-hex-small>
+    </div>
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.content }}</p>
+    <span>{{ post.author }}</span>
+</div>

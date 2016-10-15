@@ -1,0 +1,16 @@
+<h2>
+    <div class="back-btn" ui-sref="landing"></div>
+    <span>
+        <i class="fa fa-forum"></i>
+        {{ title | capitalize }} help
+    </span>
+</h2>
+<div class="hex-wrapper" id="help-wrapper">
+    <rft-hex-small ui-sref="main.help({type: title === 'give' ? 'request' : 'give' })">
+        <i class="fa fa-forum"></i>
+        <span>{{ title === 'give' ? 'Request' : 'Give' }}</span>
+    </rft-hex-small>
+</div>
+<div class="posts-container">
+    <rft-post class="animated fadeIn" ng-repeat="post in posts" post="post"></rft-post>
+</div>

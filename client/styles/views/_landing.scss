@@ -1,0 +1,102 @@
+.main-container[class*="landing"], .main-container[class*="login"]{
+    .landing-logo{
+        @include background-svg('reffit-logo');
+        width: 200px;
+        height: 200px;
+        margin: 30px auto 0 auto;
+    }
+    .landing-h1, .landing-h2{
+        font-weight: 100;
+        text-align: center;
+    }
+    .landing-h1{
+        font-size: 48px;
+        margin-top: 0;
+    }
+    .landing-h2{
+        font-size: 32px;
+    }
+
+    .country-select{
+        border-bottom: 2px solid transparentize($rft-lightest-gray, 0.3);
+        width: 250px;
+        margin: 20px auto 0 auto;
+
+        select{
+            background-color: transparent;
+            color: $rft-dark-text-color;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            text-align: center;
+            width: 100%;
+            height: 30px;
+            padding: 0 20px;
+
+            option{
+                background-color: $rft-light-blue;
+            }
+        }
+    }
+    .login-btn{
+        text-align: center;
+        font-size: 18px;
+        cursor: pointer;
+        margin: 30px auto;
+        width: 100px;
+        .fa{
+            margin-right: 10px;
+        }
+    }
+
+    .rft-input-wrapper{
+        width: 250px;
+        margin: 20px auto;
+        overflow: hidden;
+
+        input{
+            border: none;
+            background: transparent;
+            color: $rft-dark-text-color;
+            text-align: center;
+            border-bottom: 2px solid transparentize($rft-lightest-gray, 0.3);
+            height: 30px;
+            width: 100%;
+            display: block;
+            font-size: 16px;
+            outline: none;
+            padding: 0 15px;
+            &::-webkit-input-placeholder {
+                color: transparentize($rft-dark-text-color, 0.3);
+            }
+
+            &:-moz-placeholder { /* Firefox 18- */
+                color: transparentize($rft-dark-text-color, 0.3);
+            }
+
+            &::-moz-placeholder {  /* Firefox 19+ */
+                color: transparentize($rft-dark-text-color, 0.3);
+            }
+
+            &:-ms-input-placeholder {
+                color: transparentize($rft-dark-text-color, 0.3);
+            }
+            &:focus, &:active{
+                border-color: $rft-blue;
+            }
+        }
+    }
+}
+.login-btn-rounded{
+    border: 2px solid $rft-lightest-gray;
+    border-radius: 5px;
+    background-color: transparent;
+    width: 250px;
+    height: 40px;
+    font-size: 18px;
+    margin: 40px auto;
+    display: block;
+    .fa{
+        margin-right: 10px;
+    }
+}

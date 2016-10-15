@@ -1,0 +1,10 @@
+<h2>
+    <div class="back-btn" ui-sref="main.info"></div>
+    <span>
+        <i class="fa fa-{{ titleClass }}"></i>
+        {{ title | capitalize }}
+    </span>
+</h2>
+<div class="posts-container">
+    <rft-post class="animated fadeIn" ng-repeat="post in posts" post="post"></rft-post>
+</div>

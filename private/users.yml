@@ -1,0 +1,5 @@
+crveni_krst:
+  email: crvenikrst@nis.rs
+  username: admin
+  password: admin
+  isAdmin: true

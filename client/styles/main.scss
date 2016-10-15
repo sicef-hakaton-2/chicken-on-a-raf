@@ -1,0 +1,109 @@
+@import '{reywood:bootstrap3-sass}/bootstrap';
+
+@import "colors";
+@import "variables";
+@import "mixins";
+@import "structures";
+
+@import "icons/icons";
+
+@import "components/hex-grid";
+
+@import "views/landing";
+@import "views/posts";
+
+
+body, html {
+    background-color: $rft-lightest-gray;
+}
+.app-background{
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: 0.2s;
+
+    background: #{$rft-blue}; /* Old browsers */
+    background: -moz-linear-gradient(-60deg, #{$rft-light-blue} 16%, #{$rft-light-blue} 16%, #{$rft-blue} 87%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-60deg, #{$rft-light-blue} 16%,#{$rft-light-blue} 16%,#{$rft-blue} 87%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(120deg, #{$rft-light-blue} 16%,#{$rft-light-blue} 16%,#{$rft-blue} 87%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$rft-light-blue}', endColorstr='#{$rft-blue}',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    &[class*="landing"]{
+        opacity: 0.80;
+    }
+    &[class*="main"]{
+        //opacity: 0.60;
+    }
+}
+.main-container{
+    position: fixed;
+    z-index: 500;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+    color: $rft-dark-text-color;
+    *{
+        font-family: 'Open Sans', arial, serif;
+        font-weight: 400;
+    }
+    .main-view-container{
+        height: calc(100vh - 90px);
+        overflow-y: auto;
+        position: relative;
+    }
+}
+
+.rft-header{
+    height: 90px;
+    width: calc(100% - 50px);
+    margin: 0 auto;
+    border-bottom: 2px solid transparentize($rft-lightest-gray, 0.5);
+
+    .logo{
+        @include background-svg('reffit-logo');
+        width: 70px;
+        margin: 10px;
+        height: 70px;
+        float: left;
+        cursor: pointer;
+    }
+
+    nav{
+        float: right;
+        margin: 30px 0;
+        span{
+            font-size: 30px;
+            cursor: pointer;
+            float: right;
+            margin-right: 20px;
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: rgba(0,0,0,0.1);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(0,0,0,0.2);
+}
